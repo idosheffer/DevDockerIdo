@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "cNT7AkOvhxXs4g7lnjL+crbechsGo88HDdM3gKKlzXNiPm1sGJt+IOzwhXSbnwGTRMSLVkIDIxgoCGY7wtYI9A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ido\\Desktop\\DockerPro\\DevopsAPI\\DevopsAPI\\DevopsAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ido\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
+  ],
+  "logs": []
+}
