@@ -3,28 +3,22 @@
 #Depending on the operating system of the host machines(s) that will build or run the containers, the image specified in the FROM statement may need to be changed.
 #For more information, please see https://aka.ms/containercompat
 
-#FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-nanoserver-1903 AS base
-#WORKDIR /app
-#EXPOSE 80
-#
-#FROM mcr.microsoft.com/dotnet/core/sdk:3.1-nanoserver-1903 AS build
-#WORKDIR /src
-#COPY ["DevopsAPI/DevopsAPI.csproj", "DevopsAPI/"]
-#RUN dotnet restore "DevopsAPI/DevopsAPI.csproj"
-#COPY . DevopsAPI/
-#WORKDIR "/src/DevopsAPI"
-#RUN dotnet build "DevopsAPI.csproj" -c Release -o /app/build
-#
-#FROM build AS publish
-#RUN dotnet publish "DevopsAPI.csproj" -c Release -o /app/publish
-#
-#FROM base AS final
-#WORKDIR /app
-#COPY --from=publish /app/publish .
-#ENTRYPOINT ["dotnet", "DevopsAPI.dll"]
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-nanoserver-1903 AS base
 WORKDIR /app
-COPY . .
-RUN dotnet build -c Release
+EXPOSE 80
 
-ENTRYPOINT["dotnet","run", "--no-launch-profile"]
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-nanoserver-1903 AS build
+WORKDIR /src
+COPY ["DevopsAPI.csproj", "DevopsAPI/"]
+RUN dotnet restore "DevopsAPI/DevopsAPI.csproj"
+COPY . DevopsAPI/
+WORKDIR "/src/DevopsAPI"
+RUN dotnet build "DevopsAPI.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "DevopsAPI.csproj" -c Release -o /app/publish
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "DevopsAPI.dll"]
