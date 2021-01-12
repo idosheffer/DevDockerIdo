@@ -24,6 +24,6 @@ stages:
       displayName: Build an image
       inputs:
         command: build
-        dockerfile: 'C:\Users\ido\Desktop\DockerPro\DevDockerIdo\DevopsAPI\DevopsAPI\Dockerfile'
+        dockerfile: '$(Build.SourcesDirectory)\DevopsAPI\DevopsAPI\Dockerfile'
         tags: |
           $(tag)
