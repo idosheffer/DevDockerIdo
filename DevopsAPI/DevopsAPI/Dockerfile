@@ -11,7 +11,7 @@ FROM mcr.microsoft.com/dotnet/core/sdk:3.1-nanoserver-1903 AS build
 WORKDIR /src
 COPY ["DevopsAPI/DevopsAPI.csproj", "DevopsAPI/"]
 RUN dotnet restore "DevopsAPI/DevopsAPI.csproj"
-COPY . .
+COPY . DevopsAPI/
 WORKDIR "/src/DevopsAPI"
 RUN dotnet build "DevopsAPI.csproj" -c Release -o /app/build
 

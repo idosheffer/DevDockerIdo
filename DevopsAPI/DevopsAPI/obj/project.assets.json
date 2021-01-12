@@ -89,11 +89,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ido\\Desktop\\DockerPro\\DevopsAPI\\DevopsAPI\\DevopsAPI.csproj",
+      "projectUniqueName": "C:\\Users\\ido\\Desktop\\DockerPro\\DevDockerIdo\\DevopsAPI\\DevopsAPI\\DevopsAPI.csproj",
       "projectName": "DevopsAPI",
-      "projectPath": "C:\\Users\\ido\\Desktop\\DockerPro\\DevopsAPI\\DevopsAPI\\DevopsAPI.csproj",
+      "projectPath": "C:\\Users\\ido\\Desktop\\DockerPro\\DevDockerIdo\\DevopsAPI\\DevopsAPI\\DevopsAPI.csproj",
       "packagesPath": "C:\\Users\\ido\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ido\\Desktop\\DockerPro\\DevopsAPI\\DevopsAPI\\obj\\",
+      "outputPath": "C:\\Users\\ido\\Desktop\\DockerPro\\DevDockerIdo\\DevopsAPI\\DevopsAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
